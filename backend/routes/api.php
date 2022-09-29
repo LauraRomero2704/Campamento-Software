@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BootcampController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('bootcamps',
                     BootcampController::class);
+
+Route::apiResource('reviews',
+                    ReviewController::class);
+
+Route::apiResource('courses',
+                    CourseController::class);
+
+
